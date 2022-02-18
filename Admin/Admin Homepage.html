@@ -5,9 +5,48 @@
 <title>Admin Homepage</title>
 <link href="Admin Homepage.css" rel="stylesheet" type="text/css">
 </head>
- 
+
 <body>
-<h1> This is the Admin homepage</h1><br>
-	<p>hi</p>
-	</body>
+<h1> This is the Admin homepage</h1>
+<br>
+<h1>Incoming</h1>
+<label for="item">Item:</label>
+<select name="item" id="item">
+  <option value="T-shirt">T-Shirt</option>
+  <option value="Ink">Ink</option>
+  <option value="Teflon">Teflon</option>
+  <option value="DistilledWater">Distilled Water</option>
+</select>
+	
+<label for="tentacles">Quantity:</label>
+
+<input type="number" id="quantity" name="quantity"
+       min="0" max="250">
+
+	
+<label for="color">Color:</label>
+<select name="color" id="color">
+  <option value="white">white</option>
+  <option value="grey">grey</option>
+  <option value="black">black</option>
+</select>
+<label for="size">Size:</label>
+<select name="size" id="size">
+  <option value="XS">XS</option>
+  <option value="S">S</option>
+  <option value="M">M</option>
+  <option value="L">L</option>
+  <option value="XL">XL</option>
+  <option value="XL">XXL</option>
+</select>
+<label for="cartridgecolor">Cartridge Color:</label>
+<select name="cartridgecolor" id="cartridgecolor">
+  <option value="white">white</option>
+  <option value="yellow">yellow</option>
+  <option value="red">red</option>
+  <option value="cyan">cyan</option>
+  <option value="magenta">magenta</option>
+  <option value="black">black</option>
+</select>
+</body>
 </html>
