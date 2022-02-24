@@ -1,11 +1,15 @@
 @charset "UTF-8";
 /* CSS Document 
 Customer_Homepage.css*/
-header{background-color: aliceblue;}
-body {background-color: tan;}
+header{
+	background-color: aliceblue;
+}
+body {
+	background-color: tan;
+}
 table, th, td {
-  border:1px solid black;
-background-color: beige;
+  	border:1px solid black;
+	background-color: beige;
 }
 
 .button {
@@ -19,4 +23,15 @@ background-color: beige;
   margin: 4px 2px;
   cursor: pointer;
 }
+.AlignTable{
+	margin: 0 auto;
+
+}
+.MarginImage{
+	margin-right: 6em;
+}
+.MarginImageSweatShirt{
+	margin-left: 6em;
+}
+
 
