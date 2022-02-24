@@ -3,6 +3,10 @@
 Customer_Homepage.css*/
 header{background-color: aliceblue;}
 body {background-color: tan;}
+table, th, td {
+  border:1px solid black;
+background-color: beige;
+}
 
 .button {
   border: none;
