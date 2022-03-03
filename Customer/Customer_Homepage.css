@@ -8,15 +8,8 @@ body {
 	background-color: tan;
 }
 table, th, td {
-<<<<<<< HEAD
   	border:1px solid black;
-	background-color: beige;
-=======
-  border:1px solid black;
-background-color: beige;
-	
-		
->>>>>>> origin/main
+	background-color: beige;	
 }
 
 
@@ -42,5 +35,9 @@ font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",
 .MarginImageSweatShirt{
 	margin-left: 6em;
 }
+#center {
+	margin: 0 auto;
+}
+
 
 
