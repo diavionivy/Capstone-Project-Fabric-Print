@@ -14,6 +14,7 @@ table, th, td {
 background-color: beige;
 	
 		
+	background-color: beige;	
 }
 
 
@@ -39,5 +40,9 @@ font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",
 .MarginImageSweatShirt{
 	margin-left: 6em;
 }
+#center {
+	margin: 0 auto;
+}
+
 
 
