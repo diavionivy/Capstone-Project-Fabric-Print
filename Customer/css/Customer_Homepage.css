@@ -46,6 +46,13 @@ font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",
 #center {
 	margin: 0 auto;
 }
+#buttonCenter{
+	margin: 0 auto;
+}
+.inputFloatNone{
+	margin:  0 auto;
+	float: none;
+}
 
 
 
