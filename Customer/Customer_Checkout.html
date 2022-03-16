@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Customer Checkout</title>
-<link href="Customer_Homepage.css" rel="stylesheet" type="text/css">
+<link href="css/Customer_Homepage.css" rel="stylesheet" type="text/css">
 </head>
 <header>
 	<h1>
@@ -12,17 +12,22 @@
 </header>
 <body>
 
-	<pre>
 <form>
-First Name         <input type=text name=" Name">
-Last Name          <input type=text name=" Name">
-KSU E-mail Address <input type=text name="E-mail">
-Phone Number       <input type=text name="Phone Number">
-Date of Request    <input type=text name="Date">		
+  <label for="fname">First name:</label><br>         
+	<input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+	<input type="text" id="lname" name="lname"><br>
+  <label for="fname">KSU E-mail Address:</label><br>
+	<input type="text" id="email" name="email"><br>
+  <label for="lname">Phone Number:</label><br>
+	<input type="text" id="phone" name="phone"><br>
+  <label for="fname">Date of Request:</label><br>
+	<input type="text" id="request" name="request"><br>
+  
+	
+          <input type="submit" value=" SUBMIT">
 
-             			<input type="submit" value=" SUBMIT">
-
-</form></Pre>
+</form>
 	<button class ="button" onClick="location.href='Customer_Design.html'">
 	Back to Design
 	</button>

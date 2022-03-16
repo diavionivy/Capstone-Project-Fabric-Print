@@ -1,4 +1,36 @@
-<!doctype html>
+<?php
+$conn=mysql_connect("hostname","username","password");
+mysql_select_db("databasename",$conn);
+
+// Run the query.
+$result = $conn->query("SELECT * FROM table LIMIT 10");
+
+// Get the result in to a more usable format.
+$query = array();
+while($query[] = mysqli_fetch_assoc($result));
+array_pop($query);
+
+// Output a dynamic table of the results with column headings.
+echo '<table border="1">';
+echo '<tr>';
+foreach($query[0] as $key => $value) {
+    echo '<td>';
+    echo $key;
+    echo '</td>';
+}
+echo '</tr>';
+foreach($query as $row) {
+    echo '<tr>';
+    foreach($row as $column) {
+        echo '<td>';
+        echo $column;
+        echo '</td>';
+    }
+    echo '</tr>';
+}
+echo '</table>';
+?>\
+
 <html>
 <head>
 <meta charset="UTF-8">
@@ -69,70 +101,7 @@
     <td>Yes</td>
   </tr>
 </table>
-		
-<table>
-  <tr>
-    <th>Ink Cartridges</th>
-    <th>Quantity Available</th>
-  </tr>
-  <tr>
-    <td>Yellow</td>
-    <td>#</td>
-  </tr>
-  <tr>
-    <td>White</td>
-    <td>#</td>
-  </tr>
-  <tr>
-    <td>Red</td>
-    <td>#</td>
-  </tr>
-  <tr>
-    <td>Cyan</td>
-    <td>#</td>
-  </tr>
-  <tr>
-    <td>Magenta</td>
-    <td>#</td>
-  </tr>
-  <tr>
-    <td>Black</td>
-    <td>#</td>
-  </tr>
-	</table>
-		</div>
-	<div class="myDiv">
 
-<table align="left" width="368">
-	<tr>
-		<th>Teflon</th>
-		<th>Quantity Available</th>
-	</tr>
-	<tr>
-		<td>Teflon 1</td>
-		<td>#</td>
-	</tr>
-	<tr>
-		<td>Teflon 2</td>
-		<td>#</td>
-	</tr>
-	</table>
-
-<table width="244">
-	<tr>
-		<th>Distilled Water</th>
-		<th>Jugs Available</th>
-	</tr>
-	<tr>
-		<td>Distilled Water</td>
-		<td>#</td>
-	</tr>
-		<td>Distilled Water #2</td>
-		<td>#</td>
-	</table>
-			</div>
-	<div class="myDiv">
-		<button class = "button" id = "ToAdminHomepage" onClick="location.href='Admin_Homepage.html'"> Admin Homepage </button>
-</div>
 </body>
 </html>
+
