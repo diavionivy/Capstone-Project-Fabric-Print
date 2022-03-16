@@ -2,7 +2,7 @@
 /* CSS Document 
 Customer_Homepage.css*/
 header{
-	background-color: aliceblue;
+	background-color:grey;
 }
 body {
 	background-color: tan;
@@ -35,9 +35,17 @@ font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",
 .MarginImageSweatShirt{
 	margin-left: 6em;
 }
+#headerPicture{
+	width: 10em;
+}
+#headerText{
+	margin-bottom: 4em;
+	
+}
 #center {
 	margin: 0 auto;
 }
+
 
 
 
