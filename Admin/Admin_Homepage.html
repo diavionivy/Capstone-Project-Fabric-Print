@@ -1,60 +1,151 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>Admin Homepage</title>
-<link href="css/Admin_Homepage.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+  <title>Admin Homepage</title>
+  <link href="css/Admin_Homepage.css" rel="stylesheet" type="text/css">
 </head>
-	<header>
-		<h1> This is the Admin homepage</h1>
-	</header>
+<header>
+  <h1> This is the Admin homepage</h1>
+</header>
 
 <body>
-<br>
-	<button class = "button" id = "InventoryButton" onClick="location.href='Inventory_Homepage.html'">
-	Inventory Page
-	</button>
-<h1>Incoming Inventory</h1>
-<label for="item">Item:</label>
-<select class = "selectSpacing" name="item" id="item">
-  <option value="T-shirt">T-Shirt</option>
-  <option value="Ink">Ink</option>
-  <option value="Teflon">Teflon</option>
-  <option value="DistilledWater">Distilled Water</option>
-</select>
-	
-<label for="quantity">Quantity:</label>
+  
+  <h1>Incoming Inventory</h1>
 
-<input class = "selectSpacing" type="number" id="quantity" name="quantity"
-       min="0" max="250">
+  <!-- Need to update action-->
+  <!-- Clothing-->
+  <form action="clothing.php" method="post">
+    <table>
+      <tr>
+        <th colspan="2" align="center">Clothing</th>
+      </tr>
+      <tr>
+        <td><label for="item">Item:</label></td>
+        <td><select class="selectSpacing" name="item" id="item">
+            <option value="T-shirt">T-Shirt</option>
+            <option value="Sweatshirt">Sweatshirt</option>
+            <option value="T-shirt(pre-treated)">T-shirt(pre-treated)</option>
+          </select></td>
+      </tr>
+      <tr>
+        <td><label for="clothing_quantity">Quantity:</label></td>
+        <td><input class="selectSpacing" type="number" id="clothing_quantity" name="clothing_quantity" min="0" max="250"></td>
+      </tr>
+      <tr>
+        <td><label for="clothing_color">Color:</label></td>
+        <td><select class="selectSpacing" name="clothing_color" id="color">
+            <option value="white">white</option>
+            <option value="grey">grey</option>
+            <option value="black">black</option>
+          </select></td>
+      </tr>
+      <tr>
+        <td><label for="clothing_size">Size:</label></td>
+        <td><select class="selectSpacing" name="clothing_size" id="clothing_size">
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="XL">XXL</option>
+          </select></td>
+      </tr>
+      
+      <tr>
+          <td colspan="2" align="center"><input type="submit" name = "submit" value=" SUBMIT"></td>
+      </tr>
+    </table>
+  </form>
 
-	
-<label for="color">Color:</label>
-<select class = "selectSpacing" name="color" id="color">
-  <option value="white">white</option>
-  <option value="grey">grey</option>
-  <option value="black">black</option>
-</select>
-<label for="size">Size:</label>
-<select class = "selectSpacing" name="size" id="size">
-  <option value="XS">XS</option>
-  <option value="S">S</option>
-  <option value="M">M</option>
-  <option value="L">L</option>
-  <option value="XL">XL</option>
-  <option value="XL">XXL</option>
-</select>
-<label for="cartridgecolor">Cartridge Color:</label>
-<select class = "selectSpacing" name="cartridgecolor" id="cartridgecolor">
-  <option value="white">white</option>
-  <option value="yellow">yellow</option>
-  <option value="red">red</option>
-  <option value="cyan">cyan</option>
-  <option value="magenta">magenta</option>
-  <option value="black">black</option>
-</select>
-	<button id= "SubmitButton">
-	Submit ✓
-	</button>
+  <br>
+
+  <!-- Printer Cartridge-->
+  <form action = 'printer_cartridge.php' method = 'post'>
+    <table>
+      <tr>
+        <th colspan="2" align="center">Printer Cartridge</th>
+      </tr>
+      <tr>
+        <td><label for="cartridge_color">Cartridge Color:</label></td>
+        <td><select class="selectSpacing" name="cartridge_color" id="cartridge_color">
+            <option value="white">white</option>
+            <option value="yellow">yellow</option>
+            <option value="red">red</option>
+            <option value="cyan">cyan</option>
+            <option value="magenta">magenta</option>
+            <option value="black">black</option>
+          </select></td>
+      </tr>
+      <tr>
+        <td><label for="quantity">Quantity:</label></td>
+        <td><input class="selectSpacing" type="number" id="cartridge_quantity" name="cartridge_quantity" min="0" max="250"></td>
+      </tr>
+      <tr>
+				<td colspan="2" align="center"><input type="submit" name = "submit" value=" SUBMIT"></td>
+			</tr>
+    </table>
+  </form>
+  <br>
+
+  <!--Distilled Water-->
+  <form action = 'distilled_water.php' method = 'post'>
+    <table>
+      <tr>
+        <th colspan="2" align="center">Distilled Water</th>
+      </tr>
+      <tr>
+        <td><label>Quantity:</label></td>
+        <td><input class="selectSpacing" type="number" name="distilled_water_quantity" min="0" max="250"></td>
+      </tr>
+      <tr>
+				<td colspan="2" align="center"><input type="submit" name = "submit" value=" SUBMIT"></td>
+			</tr>
+    </table>
+  </form>
+  <br>
+
+  <!--Teflon-->
+  <form action = "teflon.php" method = "post">
+    <table>
+      <tr>
+        <th colspan="2" align="center">Teflon</th>
+      </tr>
+      <tr>
+        <td><label>Quantity:</label></td>
+        <td><input class="selectSpacing" type="number" name="teflon_quantity" min="0" max="250"></td>
+      </tr>
+      <tr>
+				<td colspan="2" align="center"><input type="submit" name = "submit" value=" SUBMIT"></td>
+			</tr>
+    </table>
+  </form>
+  <br>
+
+  <!--Pre-Treatment-->
+  <form action = 'pre_treatment.php' method = 'post'>
+    <table>
+      <tr>
+        <th colspan="2" align="center">Pre-Treatment</th>
+      </tr>
+      <tr>
+        <td><label>Quantity:</label></td>
+        <td><input class="selectSpacing" type="number" name="pre_treatment_quantity" min="0" max="250"></td>
+      </tr>
+      <tr>
+				<td colspan="2" align="center"><input type="submit" name = "submit" value=" SUBMIT"></td>
+			</tr>
+    </table>
+  </form>
+  <br>
+
+  <button class="button" id="InventoryButton" onClick="location.href='Inventory_Homepage.html'">
+    Inventory Page
+  </button>
+
+
+
 </body>
+
 </html>
