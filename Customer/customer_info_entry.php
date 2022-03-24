@@ -1,6 +1,8 @@
 <?php
 
 include 'dbcon.php';
+header("Location: http://localhost:8080/capstone/Customer/Customer_Checkout.html");
+
 
 if(!$conn)
 {
@@ -8,18 +10,20 @@ if(!$conn)
     echo "failed";
 }
 
-echo "connected successfully!!";
+echo "connected successfully!! <br>";
 
-$ksuid = (int)$_REQUEST['ksuid'];
-$fname = $_REQUEST['fname'];
+$ksuid = $_REQUEST['ksuid'];
 $lname = $_REQUEST['lname'];
+$fname = $_REQUEST['fname'];
 $email = $_REQUEST['email'];
-$phone = (int)$_REQUEST['phone'];
-$request = $_REQUEST['request'];
-$rso = $_REQUEST['rso'];
+$phone = $_REQUEST['phone'];
+$date = date("Y/m/d");
 
-$sql_query_customer_info = "INSERT INTO CUSTOMER (idCUSTOMER,  Customer_Lname, Customer_Fname, KSU_Email,Phone_number,Date_of_request)
-VALUES($ksuid,'$lname','$fname','$email',$phone,'$request')";
+
+$sql_query_customer_info = "INSERT INTO CUSTOMER (KSU_ID, Customer_Lname, Customer_Fname, KSU_Email, Phone_number, Date_of_request)
+VALUES('$ksuid','$lname','$fname','$email','$phone','$date')";
+
+echo "$sql_query_customer_info";
 
 if(mysqli_query($conn,$sql_query_customer_info))
 {
@@ -30,54 +34,8 @@ else
     echo "Error: " . $sql . "" . mysqli_error($conn);
 }
 
-$sql_query_rso = "INSERT INTO RSO()";
-
-if(mysqli_query($conn,$sql_query))
-{
-    echo "New Customer Info inserted successfully";
-}
-else
-{
-    echo "Error: " . $sql . "" . mysqli_error($conn);
-}
-
-
-
 
 mysqli_close($conn);
 
-/*
-
-if(isset($_Post['submit']))
-{
-    $fname = $_Post['fname'];
-    $lname = $_Post['lname'];
-    $email = $_Post['email'];
-    $phone = $_Post['phone'];
-    $request = $_Post['request'];
-
-    echo "variables assigned";
-
-    $sql_query = "INSERT INTO CUSTOMER (Customer_Lname, Customer_Fname, KSU_Email,Phone_number,Date_of_request)
-    VALUES('$lname','$fname','$email','$phone','$request')";
-
-    echo "querries ran";
-
-
-
-
-    if(mysqli_query($conn,$sql_query))
-    {
-        echo "New Customer Info inserted successfully";
-    }
-    else
-    {
-        echo "Error: " . $sql . "" . mysqli_error($conn);
-    }
-    mysqli_close($conn);
-}
-echo "didnt assign variables";
-
-*/
 
 ?>
