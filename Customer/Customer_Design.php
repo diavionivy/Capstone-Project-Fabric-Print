@@ -1,3 +1,10 @@
+<?php
+include "dbcon.php";
+
+
+?>
+
+
 <!doctype html>
 <html>
 <head>
