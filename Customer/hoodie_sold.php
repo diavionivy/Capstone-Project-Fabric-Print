@@ -1,4 +1,9 @@
 <?php
+/*
+* Deletes sweatshirt records from CLOTHING table based on quantity entered in Customer_Design.html
+*/
+
+//Keeps user on user's current page after executing php
 header("Location: http://localhost:8080/capstone/Customer/Customer_Design.html");
 include 'dbcon.php';
 

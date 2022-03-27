@@ -1,35 +1,36 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>Customer Checkout</title>
-<link href="css/Customer_Homepage.css" rel="stylesheet" type="text/css">
+	<meta charset="UTF-8">
+	<title>Customer Info Entry</title>
+	<link href="css/Customer_Homepage.css" rel="stylesheet" type="text/css">
 </head>
 <header>
-			
 
-	<h1 id = "headerText">
-	<img src="images/MB_Horz_3Clr_whiteLtrs.png" alt = "KSUHeader" id="headerPicture">
-	This is the Customer Checkout Page
+
+	<h1 id="headerText">
+		<img src="images/MB_Horz_3Clr_whiteLtrs.png" alt="KSUHeader" id="headerPicture">
+		This is the Customer Info Entry Page
 	</h1>
 </header>
+
 <body>
 
 	<form action="customer_info_entry.php" method="post">
 		<table>
-		
+
 			<tr>
 				<td><label for="ksuid">KSU ID:</label></td>
 				<td><input type="text" id="ksuid" name="ksuid"></td>
 			</tr>
-=
 			<tr>
 				<td><label for="fname">First name:</label></td>
 				<td><input type="text" id="fname" name="fname"></td>
 			</tr>
 			<tr>
-				<td>  <label for="lname">Last name:</label></td>
-				<td>	<input type="text" id="lname" name="lname"></td>
+				<td> <label for="lname">Last name:</label></td>
+				<td> <input type="text" id="lname" name="lname"></td>
 			</tr>
 			<tr>
 				<td><label for="email">KSU E-mail Address:</label></td>
@@ -39,7 +40,7 @@
 				<td><label for="phone">Phone Number:</label></td>
 				<td><input type="text" id="phone" name="phone"></td>
 			</tr>
-		<!--
+			<!--
 			<tr>
 				<td><label for="request">Date of Request:</label></td>
 				<td><input type="text" id="request" name="request"></td>
@@ -50,16 +51,16 @@
 			</tr>
 		-->
 			<tr>
-				<td colspan="2" align="center"><input type="submit" name = "submit" value=" SUBMIT"></td>
+				<td colspan="2" align="center"><input type="submit" name="submit" value=" SUBMIT"></td>
 			</tr>
 		</table>
 	</form>
-	<button class ="button" onClick="location.href='Customer_Design.html'">
-	Back to Design
+
+	<!-- Button to go back to the Customer_Design Page-->
+	<button class="button" onClick="location.href='Customer_Design.html'">
+		Back to Design
 	</button>
-	
-	<h5>
-	This is the last page
-	</h5>
+
 </body>
+
 </html>

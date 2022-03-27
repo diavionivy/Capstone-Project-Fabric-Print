@@ -3,18 +3,19 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Admin Homepage</title>
+  <title>Incoming Items</title>
   <link href="css/Admin_Homepage.css" rel="stylesheet" type="text/css">
 </head>
 <header>
-  <h1> This is the Admin homepage</h1>
+  <h1>Incoming Items</h1>
 </header>
 
 <body>
-  
-  <h1>Incoming Inventory</h1>
 
-  <!-- Need to update action-->
+<!-- TODO: Add Dropdown menu to select Admin making the changes. Change this file to php?-->
+
+  <h1></h1>
+
   <!-- Clothing-->
   <form action="clothing.php" method="post">
     <table>
@@ -31,7 +32,8 @@
       </tr>
       <tr>
         <td><label for="clothing_quantity">Quantity:</label></td>
-        <td><input class="selectSpacing" type="number" id="clothing_quantity" name="clothing_quantity" min="0" max="250"></td>
+        <td><input class="selectSpacing" type="number" id="clothing_quantity" name="clothing_quantity" min="0"
+            max="250"></td>
       </tr>
       <tr>
         <td><label for="clothing_color">Color:</label></td>
@@ -52,9 +54,9 @@
             <option value="XL">XXL</option>
           </select></td>
       </tr>
-      
+
       <tr>
-          <td colspan="2" align="center"><input type="submit" name = "submit" value=" SUBMIT"></td>
+        <td colspan="2" align="center"><input type="submit" name="submit" value=" SUBMIT"></td>
       </tr>
     </table>
   </form>
@@ -62,7 +64,7 @@
   <br>
 
   <!-- Printer Cartridge-->
-  <form action = 'printer_cartridge.php' method = 'post'>
+  <form action='printer_cartridge.php' method='post'>
     <table>
       <tr>
         <th colspan="2" align="center">Printer Cartridge</th>
@@ -80,17 +82,18 @@
       </tr>
       <tr>
         <td><label for="quantity">Quantity:</label></td>
-        <td><input class="selectSpacing" type="number" id="cartridge_quantity" name="cartridge_quantity" min="0" max="250"></td>
+        <td><input class="selectSpacing" type="number" id="cartridge_quantity" name="cartridge_quantity" min="0"
+            max="250"></td>
       </tr>
       <tr>
-				<td colspan="2" align="center"><input type="submit" name = "submit" value=" SUBMIT"></td>
-			</tr>
+        <td colspan="2" align="center"><input type="submit" name="submit" value=" SUBMIT"></td>
+      </tr>
     </table>
   </form>
   <br>
 
   <!--Distilled Water-->
-  <form action = 'distilled_water.php' method = 'post'>
+  <form action='distilled_water.php' method='post'>
     <table>
       <tr>
         <th colspan="2" align="center">Distilled Water</th>
@@ -100,14 +103,14 @@
         <td><input class="selectSpacing" type="number" name="distilled_water_quantity" min="0" max="250"></td>
       </tr>
       <tr>
-				<td colspan="2" align="center"><input type="submit" name = "submit" value=" SUBMIT"></td>
-			</tr>
+        <td colspan="2" align="center"><input type="submit" name="submit" value=" SUBMIT"></td>
+      </tr>
     </table>
   </form>
   <br>
 
   <!--Teflon-->
-  <form action = "teflon.php" method = "post">
+  <form action="teflon.php" method="post">
     <table>
       <tr>
         <th colspan="2" align="center">Teflon</th>
@@ -117,14 +120,14 @@
         <td><input class="selectSpacing" type="number" name="teflon_quantity" min="0" max="250"></td>
       </tr>
       <tr>
-				<td colspan="2" align="center"><input type="submit" name = "submit" value=" SUBMIT"></td>
-			</tr>
+        <td colspan="2" align="center"><input type="submit" name="submit" value=" SUBMIT"></td>
+      </tr>
     </table>
   </form>
   <br>
 
   <!--Pre-Treatment-->
-  <form action = 'pre_treatment.php' method = 'post'>
+  <form action='pre_treatment.php' method='post'>
     <table>
       <tr>
         <th colspan="2" align="center">Pre-Treatment</th>
@@ -134,15 +137,19 @@
         <td><input class="selectSpacing" type="number" name="pre_treatment_quantity" min="0" max="250"></td>
       </tr>
       <tr>
-				<td colspan="2" align="center"><input type="submit" name = "submit" value=" SUBMIT"></td>
-			</tr>
+        <td colspan="2" align="center"><input type="submit" name="submit" value=" SUBMIT"></td>
+      </tr>
     </table>
   </form>
   <br>
 
-  <button class="button" id="InventoryButton" onClick="location.href='Inventory_Homepage.html'">
-    Inventory Page
-  </button>
+  <!--Button to go back to the Admin Homepage-->
+  <div>
+    <button class="button" id="BackToAdminHomepage" onClick="location.href='index.html'">
+      Back to Admin Homepage
+    </button>
+  </div>
+
 
 
 

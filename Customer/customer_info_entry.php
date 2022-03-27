@@ -1,7 +1,11 @@
 <?php
+/*
+* Adds customer info to CUSTOMER table based on info entered in Customer_Info.html
+*/
 
+//Keeps user on user's current page after executing php
 include 'dbcon.php';
-header("Location: http://localhost:8080/capstone/Customer/Customer_Checkout.html");
+header("Location: http://localhost:8080/capstone/Customer/Customer_Info.html");
 
 
 if(!$conn)

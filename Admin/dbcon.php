@@ -1,5 +1,8 @@
 <?php
-
+/*
+* Database Connection file
+* Change variables here to match your setup
+*/
 $dbhost = "localhost";
 $dbuser = "root";
 $dbpass = "";

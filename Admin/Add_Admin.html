@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Add an Admin</title>
+  <link href="css/Admin_Homepage.css" rel="stylesheet" type="text/css">
+</head>
+<header>
+  <h1>Add an Admin</h1>
+</header>
+
+<body>
+
+  <!--Form to add a new admin user-->
+  <form action="addadmin.php" method="post">
+    <table>
+      <th colspan="2">Enter new admin user info here</th>
+      <tr>
+        <td><label for="adminlname">Last Name:</label></td>
+        <td><input type="text" id="adminlname" name="adminlname"></td>
+      </tr>
+      <tr>
+        <td><label for="adminfname">First Name:</label></td>
+        <td><input type="text" id="adminfname" name="adminfname"></td>
+      </tr>
+      <tr>
+        <td><label for="adminksuemail">KSU Email:</label></td>
+        <td><input type="text" id="adminksuemail" name="adminksuemail"></td>
+      </tr>
+      <tr>
+        <td><label for="adminphone">Phone Number:</label></td>
+        <td><input type="text" id="adminphone" name="adminphone"></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center"><input type="submit" name="submit" value="Create New Admin"></td>
+      </tr>
+    </table>
+  </form>
+
+  <!--Button to go back to the Admin Homepage-->
+  <div class="myDiv">
+    <button class="button" id="BackToAdminHomepage" onClick="location.href='index.html'">
+      Back to Admin Homepage
+    </button>
+  </div>
+
+
+</body>
+
+</html>

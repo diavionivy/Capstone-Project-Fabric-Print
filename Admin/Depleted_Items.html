@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Track Depleted Items</title>
+  <link href="css/Admin_Homepage.css" rel="stylesheet" type="text/css">
+</head>
+<header>
+  <h1>Track Depleted Items</h1>
+</header>
+<!--This Page allows the user to track depleted Printer Ink, Distilled Water, Teflon, and Pre-Treatment
+-->
+
+<body>
+
+  <h2> Enter Depleted Items in form and submit</h2>
+  <!-- Printer Cartridge-->
+  <form action='dep_printer_cartridge.php' method='post'>
+    <table>
+      <tr>
+        <th colspan="2" align="center">Printer Cartridge</th>
+      </tr>
+      <tr>
+        <td><label for="dep_cartridge_color">Cartridge Color:</label></td>
+        <td><select class="selectSpacing" name="dep_cartridge_color" id="dep_cartridge_color">
+            <option value="white">white</option>
+            <option value="yellow">yellow</option>
+            <option value="red">red</option>
+            <option value="cyan">cyan</option>
+            <option value="magenta">magenta</option>
+            <option value="black">black</option>
+          </select></td>
+      </tr>
+      <tr>
+        <td><label for="quantity">Quantity:</label></td>
+        <td><input class="selectSpacing" type="number" id="dep_cartridge_quantity" name="dep_cartridge_quantity" min="0"
+            max="250"></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center"><input type="submit" name="submit" value=" SUBMIT"></td>
+      </tr>
+    </table>
+  </form>
+  <br>
+
+  <!--Distilled Water-->
+  <form action='dep_distilled_water.php' method='post'>
+    <table>
+      <tr>
+        <th colspan="2" align="center">Distilled Water</th>
+      </tr>
+      <tr>
+        <td><label>Quantity:</label></td>
+        <td><input class="selectSpacing" type="number" name="dep_distilled_water_quantity" min="0" max="250"></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center"><input type="submit" name="submit" value=" SUBMIT"></td>
+      </tr>
+    </table>
+  </form>
+  <br>
+
+  <!--Teflon-->
+  <form action="dep_teflon.php" method="post">
+    <table>
+      <tr>
+        <th colspan="2" align="center">Teflon</th>
+      </tr>
+      <tr>
+        <td><label>Quantity:</label></td>
+        <td><input class="selectSpacing" type="number" name="dep_teflon_quantity" min="0" max="250"></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center"><input type="submit" name="submit" value=" SUBMIT"></td>
+      </tr>
+    </table>
+  </form>
+  <br>
+
+  <!--Pre-Treatment-->
+  <form action='dep_pre_treatment.php' method='post'>
+    <table>
+      <tr>
+        <th colspan="2" align="center">Pre-Treatment</th>
+      </tr>
+      <tr>
+        <td><label>Quantity:</label></td>
+        <td><input class="selectSpacing" type="number" name="dep_pre_treatment_quantity" min="0" max="250"></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center"><input type="submit" name="submit" value=" SUBMIT"></td>
+      </tr>
+    </table>
+  </form>
+  <br>
+
+  <!--Button to go back to the Admin Homepage-->
+  <div>
+    <button class="button" id="BackToAdminHomepage" onClick="location.href='index.html'">
+      Back to Admin Homepage
+    </button>
+  </div>
+
+
+
+</body>
+
+</html>
