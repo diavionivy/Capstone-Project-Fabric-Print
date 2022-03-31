@@ -1,4 +1,5 @@
 <?php
+
 /*
 * PHP file that displays current inventory levels
 */
@@ -10,42 +11,6 @@ if(!$conn)
     die("Connection Failed: " . mysqli_connect_error());
     echo "failed";
 }
-
-// Getting the Counts for the following...
-// Teflon
-$teflon_sql = "SELECT * FROM TEFLON";
-$teflon_result=mysqli_query($conn,$teflon_sql);
-$teflon_count=mysqli_num_rows($teflon_result);
-
-// Distilled Water
-$distilled_sql = "SELECT * FROM DISTILLED_WATER";
-$distilled_result=mysqli_query($conn,$distilled_sql);
-$distilled_count=mysqli_num_rows($distilled_result);
-
-// Black Ink
-$black_sql = "SELECT * FROM PRINTER_CARTRIDGE WHERE Color = 'Black'";
-$black_result=mysqli_query($conn,$black_sql);
-$black_count=mysqli_num_rows($black_result);
-
-// Cyan Ink
-$cyan_sql = "SELECT * FROM PRINTER_CARTRIDGE WHERE Color = 'Cyan'";
-$cyan_result=mysqli_query($conn,$cyan_sql);
-$cyan_count=mysqli_num_rows($cyan_result);
-
-// Magenta Ink
-$magenta_sql = "SELECT * FROM PRINTER_CARTRIDGE WHERE Color = 'Magenta'";
-$magenta_result=mysqli_query($conn,$magenta_sql);
-$magenta_count=mysqli_num_rows($magenta_result);
-
-// Yellow Ink
-$yellow_sql = "SELECT * FROM PRINTER_CARTRIDGE WHERE Color = 'Yellow'";
-$yellow_result=mysqli_query($conn,$yellow_sql);
-$yellow_count=mysqli_num_rows($yellow_result);
-
-// White Ink
-$white_sql = "SELECT * FROM PRINTER_CARTRIDGE WHERE Color = 'White'";
-$white_result=mysqli_query($conn,$white_sql);
-$white_count=mysqli_num_rows($white_result);
 
 // T-Shirt (White) XS
 $white_shirt_xs = "SELECT * FROM CLOTHING WHERE Clothing_Item = 'T-shirt' AND Clothing_Color = 'white' AND Clothing_Size = 'XS'";
@@ -196,179 +161,108 @@ $black_pre_treat_l_count=mysqli_num_rows($black_pre_treat_l_result);
 $black_pre_treat_xl = "SELECT * FROM CLOTHING WHERE Clothing_Item = 'T-shirt(pre-treated)' AND Clothing_Color = 'black' AND Clothing_Size = 'XL'";
 $black_pre_treat_xl_result=mysqli_query($conn,$black_pre_treat_xl);
 $black_pre_treat_xl_count=mysqli_num_rows($black_pre_treat_xl_result);
-
 ?>
-
-
-
 
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>Current Inventory</title>
-  <link href="css/Admin_Homepage.css" rel="stylesheet" type="text/css">
+	<meta charset="UTF-8">
+	<title>Customer Homepage</title>
+	<link href="css/Customer_Homepage.css" rel="stylesheet" type="text/css">
+
 </head>
 <header>
-  <h1>
-  <img src="images/MB_Horz_3Clr_whiteLtrs.png" class="imageHeader" alt="KSU Header"/>
-  This is the Current Inventory</h1>
+	<h1>
+		This is the Customer Homepage
+	</h1>
 </header>
 
-<!-- TODO: Make this page display current inventory levels-->
-<!--Displays the Current Inventory levels -->
+<!-- TODO: Display live inventory count-->
+<!-- Displays Inventory counts for current inventory for the Customer-->
 <body>
-  <div class="myDiv">
+	<h2>Location: Burruss Building 465</h2>
+	<h2>Price:</h2>
+	<li>$2 if you bring your own shirt</li>
+	<li>$5 if you want to purchase a shirt</li>
+	<h3>Quantity available</h3>
+	<table>
+		<tr>
+			<th>Item</th>
+			<th>XS</th>
+			<th>S</th>
+			<th>M</th>
+			<th>L</th>
+			<th>XL</th>
+			<th>Needs Pre-Treatment?</th>
+		</tr>
+		<tr>
+			<td>T-shirt (White)</td>
+			<td><?php echo $white_shirt_xs_count ?></td><!--XS-->
+            <td><?php echo $white_shirt_s_count ?></td><!--S-->
+            <td><?php echo $white_shirt_m_count ?></td><!--M-->
+            <td><?php echo $white_shirt_l_count ?></td><!--L-->
+            <td><?php echo $white_shirt_xl_count ?></td><!--XL-->
+			<td>No</td>
+		</tr>
+		<tr>
+			<td>T-shirt (Grey)</td>
+            <td><?php echo $grey_shirt_xs_count ?></td><!--XS-->
+            <td><?php echo $grey_shirt_s_count ?></td><!--S-->
+            <td><?php echo $grey_shirt_m_count ?></td><!--M-->
+            <td><?php echo $grey_shirt_l_count ?></td><!--L-->
+            <td><?php echo $grey_shirt_xl_count ?></td><!--XL-->
+			<td>Yes</td>
+		</tr>
+		<tr>
+			<td>T-shirt (Black)</td>
+			<td><?php echo $black_shirt_xs_count ?></td><!--XS-->
+            <td><?php echo $black_shirt_s_count ?></td><!--S-->
+            <td><?php echo $black_shirt_m_count ?></td><!--M-->
+            <td><?php echo $black_shirt_l_count ?></td><!--L-->
+            <td><?php echo $black_shirt_xl_count ?></td><!--XL-->
+			<td>Yes</td>
 
-    <!--Clothing Items-->
-    <table align="left">
-      <tr>
-        <th>Item</th>
-        <th>XS</th>
-        <th>S</th>
-        <th>M</th>
-        <th>L</th>
-        <th>XL</th>
-        <th>Needs Pre-Treatment?</th>
-      </tr>
-      <tr>
-        <td>T-shirt (White)</td>
-        <td><?php echo $white_shirt_xs_count ?></td><!--XS-->
-        <td><?php echo $white_shirt_s_count ?></td><!--S-->
-        <td><?php echo $white_shirt_m_count ?></td><!--M-->
-        <td><?php echo $white_shirt_l_count ?></td><!--L-->
-        <td><?php echo $white_shirt_xl_count ?></td><!--XL-->
-        <td>No</td>
-      </tr>
-      <tr>
-        <td>T-shirt (Grey)</td>
-        <td><?php echo $grey_shirt_xs_count ?></td><!--XS-->
-        <td><?php echo $grey_shirt_s_count ?></td><!--S-->
-        <td><?php echo $grey_shirt_m_count ?></td><!--M-->
-        <td><?php echo $grey_shirt_l_count ?></td><!--L-->
-        <td><?php echo $grey_shirt_xl_count ?></td><!--XL-->
-        <td>Yes</td>
-      </tr>
-      <tr>
-        <td>T-shirt (Black)</td>
-        <td><?php echo $black_shirt_xs_count ?></td><!--XS-->
-        <td><?php echo $black_shirt_s_count ?></td><!--S-->
-        <td><?php echo $black_shirt_m_count ?></td><!--M-->
-        <td><?php echo $black_shirt_l_count ?></td><!--L-->
-        <td><?php echo $black_shirt_xl_count ?></td><!--XL-->
-        <td>Yes</td>
-      </tr>
-      <tr>
-        <td>Pre-treated T-Shirt (White)</td>
-        <td><?php echo $white_pre_treat_xs_count ?></td><!--XS-->
-        <td><?php echo $white_pre_treat_s_count ?></td><!--S-->
-        <td><?php echo $white_pre_treat_m_count ?></td><!--M-->
-        <td><?php echo $white_pre_treat_l_count ?></td><!--L-->
-        <td><?php echo $white_pre_treat_xl_count ?></td><!--XL-->
-        <td>No</td>
-      </tr>
-      <tr>
-        <td>Pre-treated T-Shirt (Grey)</td>
-        <td><?php echo $grey_pre_treat_xs_count ?></td><!--XS-->
-        <td><?php echo $grey_pre_treat_s_count ?></td><!--S-->
-        <td><?php echo $grey_pre_treat_m_count ?></td><!--M-->
-        <td><?php echo $grey_pre_treat_l_count ?></td><!--L-->
-        <td><?php echo $grey_pre_treat_xl_count ?></td><!--XL-->
-        <td>No</td>
-      </tr>
-      <tr>
-        <td>Pre-treated T-Shirt (Black)</td>
-        <td><?php echo $black_pre_treat_xs_count ?></td><!--XS-->
-        <td><?php echo $black_pre_treat_s_count ?></td><!--S-->
-        <td><?php echo $black_pre_treat_m_count ?></td><!--M-->
-        <td><?php echo $black_pre_treat_l_count ?></td><!--L-->
-        <td><?php echo $black_pre_treat_xl_count ?></td><!--XL-->
-        <td>No</td>
-      </tr>
-    </table>
-    <!--Ink Cartridges-->
-    <table>
-      <tr>
-        <th>Ink Cartridges</th>
-        <th>Quantity Available</th>
-      </tr>
-      <tr>
-        <td>Black</td>
-        <td><?php echo $black_count ?></td><!--Black Ink Count-->
-      </tr>
-      <tr>
-        <td>Cyan</td>
-        <td><?php echo $cyan_count ?></td><!--Cyan Ink Count-->
-      </tr>
-      <tr>
-        <td>Magenta</td>
-        <td><?php echo $magenta_count ?></td><!--Magenta Ink Count-->
-      </tr>
-      <tr>
-        <td>Yellow</td>
-        <td><?php echo $yellow_count ?></td><!--Yellow Ink Count-->
-      </tr>
-      <tr>
-        <td>White</td>
-        <td><?php echo $white_count ?></td><!--White Ink Count-->
-      </tr>
-    </table>
-    <br>
-  </div>
-  <div class="myDiv">
+		</tr>
+		<tr>
+			<td>Pre-treated T-Shirt (White)</td>
+			<td><?php echo $white_pre_treat_xs_count ?></td><!--XS-->
+            <td><?php echo $white_pre_treat_s_count ?></td><!--S-->
+            <td><?php echo $white_pre_treat_m_count ?></td><!--M-->
+            <td><?php echo $white_pre_treat_l_count ?></td><!--L-->
+            <td><?php echo $white_pre_treat_xl_count ?></td><!--XL-->
+			<td>No</td>
+		</tr>
+		<tr>
+			<td>Pre-treated T-Shirt (Grey)</td>
+            <td><?php echo $grey_pre_treat_xs_count ?></td><!--XS-->
+            <td><?php echo $grey_pre_treat_s_count ?></td><!--S-->
+            <td><?php echo $grey_pre_treat_m_count ?></td><!--M-->
+            <td><?php echo $grey_pre_treat_l_count ?></td><!--L-->
+            <td><?php echo $grey_pre_treat_xl_count ?></td><!--XL-->
+			<td>No</td>
+		</tr>
+		<tr>
+			<td>Pre-treated T-Shirt (Black)</td>
+            <td><?php echo $black_pre_treat_xs_count ?></td><!--XS-->
+            <td><?php echo $black_pre_treat_s_count ?></td><!--S-->
+            <td><?php echo $black_pre_treat_m_count ?></td><!--M-->
+            <td><?php echo $black_pre_treat_l_count ?></td><!--L-->
+            <td><?php echo $black_pre_treat_xl_count ?></td><!--XL-->
+			<td>No</td>
+		</tr>
+	</table>
 
-    <!--Teflon-->
-    <table align="left" width="368">
-      <tr>
-        <th>Teflon</th>
-        <th>Quantity Available</th>
-      </tr>
-      <tr>
-        <td>Teflon 1</td>
-        <td><?php echo $teflon_count;?></td><!--Teflon Count -->
-      </tr>
-    </table>
-    <!--Distilled Water-->
-    <table width="244">
-      <tr>
-        <th>Distilled Water</th>
-        <th>Jugs Available</th>
-      </tr>
-      <tr>
-        <td>Distilled Water</td>
-        <td><?php echo $distilled_count ?></td><!-- Distilled Water Count -->
-      </tr>
-    </table>
-  </div>
+	<!-- Button to go to the Design Page -->
+	<button class="button" onClick="location.href='Customer_Design.html'">
+		To Design Page
+	</button>
 
-  <!--Button to go back to the Admin Homepage-->
-  <div class="myDiv">
-    <button class="button" id="BackToAdminHomepage" onClick="location.href='index.html'"> Back To Admin Homepage
-    </button>
-  </div>
+
+	<div>
+		<button class="button" id="toAdminIndex" onClick="location.href='../Admin'">
+		  To Admin Index
+		</button>
+	  </div>
 </body>
 
 </html>
-
-
-
-
-<?php
-/*
-
-Working row count code
-
-$sql = "SELECT * FROM TEFLON";
-if ($result=mysqli_query($conn,$sql)) {
-    $rowcount=mysqli_num_rows($result);
-    echo "The total number of rows are: ".$rowcount; 
-}
-
-*/
-
-
-
-
-?>
-
-
