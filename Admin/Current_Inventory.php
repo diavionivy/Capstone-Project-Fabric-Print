@@ -73,44 +73,104 @@ $white_shirt_xl_result=mysqli_query($conn,$white_shirt_xl);
 $white_shirt_xl_count=mysqli_num_rows($white_shirt_xl_result);
 
 // T-shirt (Grey) XS
+$grey_shirt_xs = "SELECT * FROM CLOTHING WHERE Clothing_Item = 'T-shirt' AND Clothing_Color = 'grey' AND Clothing_Size = 'XS'";
+$grey_shirt_xs_result=mysqli_query($conn,$grey_shirt_xs);
+$grey_shirt_xs_count=mysqli_num_rows($grey_shirt_xs_result);
 
 // T-shirt (Grey) S
+$grey_shirt_s = "SELECT * FROM CLOTHING WHERE Clothing_Item = 'T-shirt' AND Clothing_Color = 'grey' AND Clothing_Size = 'S'";
+$grey_shirt_s_result=mysqli_query($conn,$grey_shirt_s);
+$grey_shirt_s_count=mysqli_num_rows($grey_shirt_s_result);
 
 // T-shirt (Grey) M
+$grey_shirt_m = "SELECT * FROM CLOTHING WHERE Clothing_Item = 'T-shirt' AND Clothing_Color = 'grey' AND Clothing_Size = 'M'";
+$grey_shirt_m_result=mysqli_query($conn,$grey_shirt_m);
+$grey_shirt_m_count=mysqli_num_rows($grey_shirt_m_result);
 
 // T-shirt (Grey) L
+$grey_shirt_l = "SELECT * FROM CLOTHING WHERE Clothing_Item = 'T-shirt' AND Clothing_Color = 'grey' AND Clothing_Size = 'L'";
+$grey_shirt_l_result=mysqli_query($conn,$grey_shirt_l);
+$grey_shirt_l_count=mysqli_num_rows($grey_shirt_l_result);
 
 // T-shirt (Grey) XL
+$grey_shirt_xl = "SELECT * FROM CLOTHING WHERE Clothing_Item = 'T-shirt' AND Clothing_Color = 'grey' AND Clothing_Size = 'XL'";
+$grey_shirt_xl_result=mysqli_query($conn,$grey_shirt_xl);
+$grey_shirt_xl_count=mysqli_num_rows($grey_shirt_xl_result);
 
 // T-shirt (Black) XS
+$black_shirt_xs = "SELECT * FROM CLOTHING WHERE Clothing_Item = 'T-shirt' AND Clothing_Color = 'black' AND Clothing_Size = 'XS'";
+$black_shirt_xs_result=mysqli_query($conn,$black_shirt_xs);
+$black_shirt_xs_count=mysqli_num_rows($black_shirt_xs_result);
 
 // T-shirt (Black) S
+$black_shirt_s = "SELECT * FROM CLOTHING WHERE Clothing_Item = 'T-shirt' AND Clothing_Color = 'black' AND Clothing_Size = 'S'";
+$black_shirt_s_result=mysqli_query($conn,$black_shirt_s);
+$black_shirt_s_count=mysqli_num_rows($black_shirt_s_result);
 
 // T-shirt (Black) M
+$black_shirt_m = "SELECT * FROM CLOTHING WHERE Clothing_Item = 'T-shirt' AND Clothing_Color = 'black' AND Clothing_Size = 'M'";
+$black_shirt_m_result=mysqli_query($conn,$black_shirt_m);
+$black_shirt_m_count=mysqli_num_rows($black_shirt_m_result);
 
 // T-shirt (Black) L
+$black_shirt_l = "SELECT * FROM CLOTHING WHERE Clothing_Item = 'T-shirt' AND Clothing_Color = 'black' AND Clothing_Size = 'L'";
+$black_shirt_l_result=mysqli_query($conn,$black_shirt_l);
+$black_shirt_l_count=mysqli_num_rows($black_shirt_l_result);
 
 // T-shirt (Black) XL
+$black_shirt_xl = "SELECT * FROM CLOTHING WHERE Clothing_Item = 'T-shirt' AND Clothing_Color = 'black' AND Clothing_Size = 'XL'";
+$black_shirt_xl_result=mysqli_query($conn,$black_shirt_xl);
+$black_shirt_xl_count=mysqli_num_rows($black_shirt_xl_result);
 
 // Sweatshirt (White) XS
+$white_sweatshirt_xs = "SELECT * FROM CLOTHING WHERE Clothing_Item = 'Sweatshirt' AND Clothing_Color = 'white' AND Clothing_Size = 'XS'";
+$white_sweatshirt_xs_result=mysqli_query($conn,$white_sweatshirt_xs);
+$white_sweatshirt_xs_count=mysqli_num_rows($white_sweatshirt_xs_result);
 
 // Sweatshirt (White) S
+$white_sweatshirt_s = "SELECT * FROM CLOTHING WHERE Clothing_Item = 'Sweatshirt' AND Clothing_Color = 'white' AND Clothing_Size = 'S'";
+$white_sweatshirt_s_result=mysqli_query($conn,$white_sweatshirt_s);
+$white_sweatshirt_s_count=mysqli_num_rows($white_sweatshirt_s_result);
 
 // Sweatshirt (White) M
+$white_sweatshirt_m = "SELECT * FROM CLOTHING WHERE Clothing_Item = 'Sweatshirt' AND Clothing_Color = 'white' AND Clothing_Size = 'M'";
+$white_sweatshirt_m_result=mysqli_query($conn,$white_sweatshirt_m);
+$white_sweatshirt_m_count=mysqli_num_rows($white_sweatshirt_m_result);
 
 // Sweatshirt (White) L
+$white_sweatshirt_l = "SELECT * FROM CLOTHING WHERE Clothing_Item = 'Sweatshirt' AND Clothing_Color = 'white' AND Clothing_Size = 'L'";
+$white_sweatshirt_l_result=mysqli_query($conn,$white_sweatshirt_l);
+$white_sweatshirt_l_count=mysqli_num_rows($white_sweatshirt_l_result);
 
 // Sweatshirt (White) XL
+$white_sweatshirt_xl = "SELECT * FROM CLOTHING WHERE Clothing_Item = 'Sweatshirt' AND Clothing_Color = 'white' AND Clothing_Size = 'XL'";
+$white_sweatshirt_xl_result=mysqli_query($conn,$white_sweatshirt_xl);
+$white_sweatshirt_xl_count=mysqli_num_rows($white_sweatshirt_xl_result);
 
 // Sweatshirt (Grey) XS
+$grey_sweatshirt_xs = "SELECT * FROM CLOTHING WHERE Clothing_Item = 'Sweatshirt' AND Clothing_Color = 'grey' AND Clothing_Size = 'XS'";
+$grey_sweatshirt_xs_result=mysqli_query($conn,$grey_sweatshirt_xs);
+$grey_sweatshirt_xs_count=mysqli_num_rows($grey_sweatshirt_xs_result);
 
 // Sweatshirt (Grey) S
+$grey_sweatshirt_s = "SELECT * FROM CLOTHING WHERE Clothing_Item = 'Sweatshirt' AND Clothing_Color = 'grey' AND Clothing_Size = 'S'";
+$grey_sweatshirt_s_result=mysqli_query($conn,$grey_sweatshirt_s);
+$grey_sweatshirt_s_count=mysqli_num_rows($grey_sweatshirt_s_result);
 
 // Sweatshirt (Grey) M
+$grey_sweatshirt_m = "SELECT * FROM CLOTHING WHERE Clothing_Item = 'Sweatshirt' AND Clothing_Color = 'grey' AND Clothing_Size = 'M'";
+$grey_sweatshirt_m_result=mysqli_query($conn,$grey_sweatshirt_m);
+$grey_sweatshirt_m_count=mysqli_num_rows($grey_sweatshirt_m_result);
 
 // Sweatshirt (Grey) L
+$grey_sweatshirt_l = "SELECT * FROM CLOTHING WHERE Clothing_Item = 'Sweatshirt' AND Clothing_Color = 'grey' AND Clothing_Size = 'L'";
+$grey_sweatshirt_l_result=mysqli_query($conn,$grey_sweatshirt_l);
+$grey_sweatshirt_l_count=mysqli_num_rows($grey_sweatshirt_l_result);
 
 // Sweatshirt (Grey) XL
+$grey_sweatshirt_xl = "SELECT * FROM CLOTHING WHERE Clothing_Item = 'Sweatshirt' AND Clothing_Color = 'grey' AND Clothing_Size = 'XL'";
+$grey_sweatshirt_xl_result=mysqli_query($conn,$grey_sweatshirt_xl);
+$grey_sweatshirt_xl_count=mysqli_num_rows($grey_sweatshirt_xl_result);
 
 // Sweatshirt (Black) XS
 
@@ -164,38 +224,38 @@ $white_shirt_xl_count=mysqli_num_rows($white_shirt_xl_result);
       </tr>
       <tr>
         <td>T-shirt (Grey)</td>
-        <td>#</td><!--Add count here-->
-        <td>#</td><!--Add count here-->
-        <td>#</td><!--Add count here-->
-        <td>#</td><!--Add count here-->
-        <td>#</td><!--Add count here-->
+        <td><?php echo $grey_shirt_xs_count ?></td><!--XS-->
+        <td><?php echo $grey_shirt_s_count ?></td><!--S-->
+        <td><?php echo $grey_shirt_m_count ?></td><!--M-->
+        <td><?php echo $grey_shirt_l_count ?></td><!--L-->
+        <td><?php echo $grey_shirt_xl_count ?></td><!--XL-->
         <td>Yes</td>
       </tr>
       <tr>
         <td>T-shirt (Black)</td>
-        <td>#</td><!--Add count here-->
-        <td>#</td><!--Add count here-->
-        <td>#</td><!--Add count here-->
-        <td>#</td><!--Add count here-->
-        <td>#</td><!--Add count here-->
+        <td><?php echo $black_shirt_xs_count ?></td><!--XS-->
+        <td><?php echo $black_shirt_s_count ?></td><!--S-->
+        <td><?php echo $black_shirt_m_count ?></td><!--M-->
+        <td><?php echo $black_shirt_l_count ?></td><!--L-->
+        <td><?php echo $black_shirt_xl_count ?></td><!--XL-->
         <td>Yes</td>
       </tr>
       <tr>
         <td>Sweatshirt (White)</td>
-        <td>#</td><!--Add count here-->
-        <td>#</td><!--Add count here-->
-        <td>#</td><!--Add count here-->
-        <td>#</td><!--Add count here-->
-        <td>#</td><!--Add count here-->
+        <td><?php echo $white_sweatshirt_xs_count ?></td><!--XS-->
+        <td><?php echo $white_sweatshirt_s_count ?></td><!--S-->
+        <td><?php echo $white_sweatshirt_m_count ?></td><!--M-->
+        <td><?php echo $white_sweatshirt_l_count ?></td><!--L-->
+        <td><?php echo $white_sweatshirt_xl_count ?></td><!--XL-->
         <td>No</td>
       </tr>
       <tr>
         <td>Sweatshirt (Grey)</td>
-        <td>#</td><!--Add count here-->
-        <td>#</td><!--Add count here-->
-        <td>#</td><!--Add count here-->
-        <td>#</td><!--Add count here-->
-        <td>#</td><!--Add count here-->
+        <td><?php echo $grey_sweatshirt_xs_count ?></td><!--XS-->
+        <td><?php echo $grey_sweatshirt_s_count ?></td><!--S-->
+        <td><?php echo $grey_sweatshirt_m_count ?></td><!--M-->
+        <td><?php echo $grey_sweatshirt_l_count ?></td><!--L-->
+        <td><?php echo $grey_sweatshirt_xl_count ?></td><!--XL-->
         <td>Yes</td>
       </tr>
       <tr>
