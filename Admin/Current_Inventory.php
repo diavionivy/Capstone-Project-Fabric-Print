@@ -194,7 +194,9 @@ $grey_sweatshirt_xl_count=mysqli_num_rows($grey_sweatshirt_xl_result);
   <link href="css/Admin_Homepage.css" rel="stylesheet" type="text/css">
 </head>
 <header>
-  <h1>This is the Current Inventory</h1>
+  <h1>
+  <img src="images/MB_Horz_3Clr_whiteLtrs.png" class="imageHeader" alt="KSU Header"/>
+  This is the Current Inventory</h1>
 </header>
 
 <!-- TODO: Make this page display current inventory levels-->
