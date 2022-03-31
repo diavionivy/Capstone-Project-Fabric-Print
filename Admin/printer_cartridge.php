@@ -4,7 +4,7 @@
 */
 
 //Keeps user on user's current page after executing php
-header("Location: http://localhost:8080/capstone/Admin/Incoming_Inventory.html");
+header("Location: http://localhost:8080/capstone/Admin/Incoming_Items.html");
 
 include 'dbcon.php';
 
