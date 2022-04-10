@@ -90,8 +90,8 @@
 					</table>
 				</form>
 			</td>
+			<!-- Hoodie -->
 			<td>
-				<!-- Hoodie -->
 				<form action='hoodie_sold.php' method='post'>
 					<table>
 						<tr>
@@ -133,17 +133,56 @@
 					</table>
 				</form>
 			</td>
+			<!-- Pretreated T-Shirt-->
+			<td>
+				<form action = 'pretreated_sold.php' method = 'post'>
+					<table>
+						<tr>
+							<td> <img src="images/pretreated_shirt.jpeg" class="MarginImageSweatShirt"
+								alt="tshirt" id="WhiteSweatShirt"></td>
+						</tr>
+						<tr>
+							<td>
+								<label for="PretreatedColor">Color:</label>
+								<select class="selectSpacing" name="pretreated_color" id="pretreated_color">
+									<option value="white">white</option>
+									<option value="grey">grey</option>
+									<option value="black">black</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="size">Size:</label>
+								<select class="selectSpacing" name="pretreated_size" id="pretreated_size">
+									<option value="XS">XS</option>
+									<option value="S">S</option>
+									<option value="M">M</option>
+									<option value="L">L</option>
+									<option value="XL">XL</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="Quantity">Quantity:</label>
+								<input class="selectSpacing" type="number" id="pretreated_quantity"
+									name="pretreated_quantity" min="0" max="250">
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" align="center"><input type="submit" name="submit" value=" SUBMIT"></td>
+						</tr>
+					</table>
+				</form>
+
+			</td>
 		</tr>
 	</table>
 
 	<!-- Button to go back to Homepage - index.html-->
 	<button class="button" onClick="location.href='index.php'">
 		Back to Homepage
-	</button>
-
-	<!-- Button to go to the Customer Info Page-->
-	<button class="button" onClick="location.href='Customer_Info.html'">
-		To Customer Info Page
 	</button>
 
 </body>

@@ -252,9 +252,9 @@ $black_pre_treat_xl_count=mysqli_num_rows($black_pre_treat_xl_result);
 		</tr>
 	</table>
 
-	<!-- Button to go to the Design Page -->
-	<button class="button" onClick="location.href='Customer_Design.html'">
-		To Design Page
+	<!-- Button to go to the Customer Info Page -->
+	<button class="button" onClick="location.href='Customer_Info.html'">
+		To Customer Info Page
 	</button>
 
 
