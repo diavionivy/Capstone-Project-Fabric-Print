@@ -25,6 +25,13 @@ if(!$conn)
 
 <!--Insert Customer Order list here -->
 
+<?php 
+
+// SQL querry will be a JOIN between CUSTOMER and ORDER on idCustomer
+// Show KSU_ID, Customer_Lname, Customer_Fname, Clothing_Item, Clothing_Size, Clothing_Color, Quantity, Order_Date
+
+?>
+
 
   <!--Button to go back to the Admin Homepage-->
   <div class="myDiv">

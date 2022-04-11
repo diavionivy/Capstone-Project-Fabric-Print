@@ -4,7 +4,7 @@
 */
 
 //Keeps user on user's current page after executing php
-header("Location: http://localhost:8080/capstone/Customer/Customer_Design.html");
+header("Location: http://localhost:8080/capstone/Customer/Customer_Design.php");
 include 'dbcon.php';
 
 if(!$conn)
@@ -32,7 +32,19 @@ for ($x=0;$x<$tshirt_quantity;$x++){
     }
 }
 
+// Adding a new record to the ORDERS table
 
+$date = date("Y/m/d");
+$customer = $_REQUEST['customer'];
 
+$order_sql = "INSERT INTO ORDERS (Clothing_Item, Clothing_Size, Clothing_Color, Quantity, 
+                                    Order_Date, idCustomer)
+                VALUES ('T-shirt(pre-treated)', '$tshirt_size', '$tshirt_color', '$tshirt_quantity', '$date', $customer)";
 
+if(mysqli_query($conn,$order_sql)){
+    echo "Order created successfully";
+}
+else{
+    echo "Error: " . $sql . "" . mysqli_error($conn);
+}
 ?>

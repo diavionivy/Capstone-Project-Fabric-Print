@@ -1,3 +1,13 @@
+<?php
+include 'dbcon.php';
+if(!$conn)
+{
+    die("Connection Failed: " . mysqli_connect_error());
+    echo "failed";
+}
+
+
+?>
 <!doctype html>
 <html>
 
@@ -52,6 +62,32 @@
 									id="WhiteTShirtPicture"></td>
 
 						</tr>
+						<!-- Add Ability to Select customer
+							Need to add PHP code here-->
+							
+						<?php
+						// Getting customer id from CUSTOMER table
+						$sql = "SELECT idCUSTOMER, KSU_ID FROM CUSTOMER";
+						$result = $conn->query($sql);
+						if ($result->num_rows > 0) {
+							echo"
+							<tr>
+							<td>
+							<label for = 'customer'>Customer:</label>
+							<select class='selectSpacing' name='customer' id='customer'>
+							";
+							while($row = $result->fetch_assoc()) {
+								echo "
+								<option value=$row[idCUSTOMER]>$row[KSU_ID]</option>
+								";
+							}
+							echo "
+							</td>
+							</tr>";
+						} else {
+							echo "0 results";
+						  }
+						?>	
 						<tr>
 							<td>
 								<label for="color">Color:</label>
@@ -142,6 +178,29 @@
 							<td> <img src="images/pretreated_shirt.jpeg" class="MarginImageSweatShirt"
 								alt="tshirt" id="WhiteSweatShirt"></td>
 						</tr>
+						<?php
+						// Getting customer id from CUSTOMER table
+						$sql = "SELECT idCUSTOMER, KSU_ID FROM CUSTOMER";
+						$result = $conn->query($sql);
+						if ($result->num_rows > 0) {
+							echo"
+							<tr>
+							<td>
+							<label for = 'customer'>Customer:</label>
+							<select class='selectSpacing' name='customer' id='customer'>
+							";
+							while($row = $result->fetch_assoc()) {
+								echo "
+								<option value=$row[idCUSTOMER]>$row[KSU_ID]</option>
+								";
+							}
+							echo "
+							</td>
+							</tr>";
+						} else {
+							echo "0 results";
+						  }
+						?>	
 						<tr>
 							<td>
 								<label for="PretreatedColor">Color:</label>
@@ -180,6 +239,10 @@
 			</td>
 		</tr>
 	</table>
+
+	<div>
+		<p><?php echo $customerid_result ?></p>
+	</div>
 
 	<!-- Button to go back to Homepage - index.html-->
 	<button class="button" onClick="location.href='index.php'">

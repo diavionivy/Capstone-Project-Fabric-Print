@@ -24,7 +24,7 @@ $phone = $_REQUEST['phone'];
 $date = date("Y/m/d");
 
 
-$sql_query_customer_info = "INSERT INTO CUSTOMER (KSU_ID, Customer_Lname, Customer_Fname, KSU_Email, Phone_number, Date_of_request)
+$sql_query_customer_info = "INSERT INTO CUSTOMER (KSU_ID, Customer_Lname, Customer_Fname, KSU_Email, Phone_number, Date_Created)
 VALUES('$ksuid','$lname','$fname','$email','$phone','$date')";
 
 echo "$sql_query_customer_info";
