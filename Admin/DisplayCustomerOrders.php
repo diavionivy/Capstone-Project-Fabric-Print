@@ -22,6 +22,7 @@ if(!$conn)
   <img src="images/MB_Horz_3Clr_whiteLtrs.png" class="imageHeader" alt="KSU Header"/>
 </header>
 <body>
+  <h2>Customer Order History:</h2>
 
 <!--Insert Customer Order list here -->
 
@@ -30,6 +31,43 @@ if(!$conn)
 // SQL querry will be a JOIN between CUSTOMER and ORDER on idCustomer
 // Show KSU_ID, Customer_Lname, Customer_Fname, Clothing_Item, Clothing_Size, Clothing_Color, Quantity, Order_Date
 
+$sql = "SELECT CUSTOMER.KSU_ID, CUSTOMER.Customer_Lname, CUSTOMER.Customer_Fname, ORDERS.Clothing_Item, ORDERS.Clothing_Size, ORDERS.Clothing_Color, ORDERS.Quantity, ORDERS.Order_Date
+        FROM CUSTOMER INNER JOIN ORDERS ON CUSTOMER.idCUSTOMER=ORDERS.idCustomer;";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  echo "
+  <table>
+  <tr>
+  <th>KSU ID</th>
+  <th>Last Name</th>
+  <th>First Name</th>
+  <th>Clothing Item</th>
+  <th>Size</th>
+  <th>Color</th>
+  <th>Quantity</th>
+  <th>Order Date</th>
+  </tr>
+  ";
+ 
+  while($row = $result->fetch_assoc()) {
+    echo "
+      <tr>
+        <td>$row[KSU_ID]</td>
+        <td>$row[Customer_Lname]</td>
+        <td>$row[Customer_Fname]</td>
+        <td>$row[Clothing_Item]</td>
+        <td>$row[Clothing_Size]</td>
+        <td>$row[Clothing_Color]</td>
+        <td>$row[Quantity]</td>
+        <td>$row[Order_Date]</td>
+      </tr>
+    ";
+  }
+  echo "</table>";
+} else {
+  echo "0 results";
+}
 ?>
 
 
