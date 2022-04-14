@@ -16,11 +16,14 @@ if(!$conn)
   <meta charset="UTF-8">
   <title>Display Customer Orders</title>
   <link href="css/Admin_Homepage.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <header>
 <h1>
 <a href = "index.html"><img src="images/MB_Horz_3Clr_whiteLtrs.png" class="imageHeader" alt="KSU Header"/></a>    Admin Homepage</h1></header>
-<body>
+<body class = "body">
   <h2>Customer Order History:</h2>
 
 <!--Insert Customer Order list here -->
@@ -36,7 +39,7 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
   echo "
-  <table>
+  <table class='table table-condensed'>
   <tr>
   <th>KSU ID</th>
   <th>Last Name</th>

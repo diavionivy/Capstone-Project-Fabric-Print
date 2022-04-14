@@ -1,13 +1,17 @@
 @charset "UTF-8";
 /* CSS Document */
 header{background-color: gray;}
-body {background-color: tan;}
+
+/*
 table, th, td {
   border:1px solid black;
   background-color: beige;
   line-height: 20px;
 }
-
+*/
+.body{
+  background-color: #F8F0E3;
+}
 
 .button {
   border: none;
@@ -32,4 +36,15 @@ table, th, td {
 
 .imageHeader{
   width: 15em;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+.line {
+  width: 70%;
+  color: black;
+  size: "4";
 }

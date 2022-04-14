@@ -29,10 +29,9 @@ if(!$conn)
 	</h1>
 </header>
 
-<body>
+<body class = "body">
 	<style>
-		body{
-		background-color: tan;
+		
 		}
 		table {
 			background-color: tan;
@@ -41,14 +40,6 @@ if(!$conn)
 
 		}
 
-		tr {
-			background-color: tan;
-		}
-
-		td {
-			background-color: tan;
-
-		}
 
 		button {
 			margin: 0 auto;
@@ -65,7 +56,7 @@ if(!$conn)
 			<td>
 				<!-- T-Shirt -->
 				<form action='tshirt_sold.php' method='post'>
-					<table>
+					<table class = "AlignTable">
 						<tr>
 							<td><img src="images/white_tshirt_picture.jpeg" class="MarginImage" alt="tshirt"
 									id="WhiteTShirtPicture"></td>

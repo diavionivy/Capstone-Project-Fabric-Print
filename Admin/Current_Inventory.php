@@ -200,14 +200,15 @@ $black_pre_treat_xl_count=mysqli_num_rows($black_pre_treat_xl_result);
 ?>
 
 
-
-
 <html>
 
 <head>
   <meta charset="UTF-8">
   <title>Current Inventory</title>
   <link href="css/Admin_Homepage.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <header>
   <h1>
@@ -216,11 +217,11 @@ $black_pre_treat_xl_count=mysqli_num_rows($black_pre_treat_xl_result);
 
 <!-- TODO: Make this page display current inventory levels-->
 <!--Displays the Current Inventory levels -->
-<body>
-  <div class="myDiv">
+<body class = "body">
+  <div class = "myDiv" >
 
     <!--Clothing Items-->
-    <table align="left">
+    <table class="table table-condensed center" >
       <tr>
         <th>Item</th>
         <th>XS</th>
@@ -284,9 +285,14 @@ $black_pre_treat_xl_count=mysqli_num_rows($black_pre_treat_xl_result);
         <td><?php echo $black_pre_treat_xl_count ?></td><!--XL-->
         <td>No</td>
       </tr>
-    </table>
+      </table>
+      <hr size = "6" width = "80%" color = "black" margin-top = "2px">
+
+</div>
+<div class="myDiv">
+   
     <!--Ink Cartridges-->
-    <table>
+    <table class="table table-condensed center">
       <tr>
         <th>Ink Cartridges</th>
         <th>Quantity Available</th>
@@ -312,12 +318,13 @@ $black_pre_treat_xl_count=mysqli_num_rows($black_pre_treat_xl_result);
         <td><?php echo $white_count ?></td><!--White Ink Count-->
       </tr>
     </table>
+    <hr size = "6" width = "80%" color = "black" margin-top = "2px">
     <br>
   </div>
   <div class="myDiv">
 
     <!--Teflon-->
-    <table align="left" width="368">
+    <table class="table table-condensed center" width = "50%">
       <tr>
         <th>Teflon</th>
         <th>Quantity Available</th>
@@ -327,8 +334,11 @@ $black_pre_treat_xl_count=mysqli_num_rows($black_pre_treat_xl_result);
         <td><?php echo $teflon_count;?></td><!--Teflon Count -->
       </tr>
     </table>
+    <hr size = "6" width = "80%" color = "black" margin-top = "2px">
+</div>
+<div class = "myDiv">
     <!--Distilled Water-->
-    <table width="244">
+    <table class="table table-condensed center">
       <tr>
         <th>Distilled Water</th>
         <th>Jugs Available</th>
@@ -338,6 +348,7 @@ $black_pre_treat_xl_count=mysqli_num_rows($black_pre_treat_xl_result);
         <td><?php echo $distilled_count ?></td><!-- Distilled Water Count -->
       </tr>
     </table>
+
   </div>
 
   <!--Button to go back to the Admin Homepage-->

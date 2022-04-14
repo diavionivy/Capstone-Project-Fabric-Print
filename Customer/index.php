@@ -176,9 +176,7 @@ $black_pre_treat_xl_count=mysqli_num_rows($black_pre_treat_xl_result);
 
 </head>
 <style>
-	body{
-		background-color: tan;
-	}
+
 </style>
 <header>
 	<h1>
@@ -188,13 +186,13 @@ $black_pre_treat_xl_count=mysqli_num_rows($black_pre_treat_xl_result);
 
 <!-- TODO: Display live inventory count-->
 <!-- Displays Inventory counts for current inventory for the Customer-->
-<body>
+<body class = "body">
 	<h2>Location: Burruss Building 465</h2>
 	<h2>Price:</h2>
 	<li>$2 if you bring your own shirt</li>
 	<li>$5 if you want to purchase a shirt</li>
 	<h3>Quantity available</h3>
-	<table>
+	<table class="table table-condensed center">
 		<tr>
 			<th>Item</th>
 			<th>XS</th>

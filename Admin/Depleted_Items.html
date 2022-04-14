@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <title>Track Depleted Items</title>
   <link href="css/Admin_Homepage.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <header>
   <h1>
@@ -13,12 +16,12 @@
 <!--This Page allows the user to track depleted Printer Ink, Distilled Water, Teflon, and Pre-Treatment
 -->
 
-<body>
+<body class = "body">
 
   <h2> Enter Depleted Items in form and submit</h2>
   <!-- Printer Cartridge-->
   <form action='dep_printer_cartridge.php' method='post'>
-    <table>
+    <table class="table table-condensed">
       <tr>
         <th colspan="2" align="center">Printer Cartridge</th>
       </tr>
@@ -46,7 +49,7 @@
 
   <!--Distilled Water-->
   <form action='dep_distilled_water.php' method='post'>
-    <table>
+    <table class="table table-condensed">
       <tr>
         <th colspan="2" align="center">Distilled Water</th>
       </tr>
@@ -63,7 +66,7 @@
 
   <!--Teflon-->
   <form action="dep_teflon.php" method="post">
-    <table>
+    <table class="table table-condensed">
       <tr>
         <th colspan="2" align="center">Teflon</th>
       </tr>
@@ -80,7 +83,7 @@
 
   <!--Pre-Treatment-->
   <form action='dep_pre_treatment.php' method='post'>
-    <table>
+    <table class="table table-condensed">
       <tr>
         <th colspan="2" align="center">Pre-Treatment</th>
       </tr>

@@ -5,13 +5,16 @@
   <meta charset="UTF-8">
   <title>Incoming Items</title>
   <link href="css/Admin_Homepage.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <header>
   <h1>
     <a href = "index.html"><img src="images/MB_Horz_3Clr_whiteLtrs.png" class="imageHeader" alt="KSU Header"/></a>    Admin Homepage</h1>    Incoming Items</h1>
 </header>
 
-<body>
+<body class = "body">
 
 <!-- TODO: Add Dropdown menu to select Admin making the changes. Change this file to php?-->
 
@@ -19,7 +22,7 @@
 
   <!-- Clothing-->
   <form action="clothing.php" method="post">
-    <table>
+    <table class="table table-condensed">
       <tr>
         <th colspan="2" align="center">Clothing</th>
       </tr>
@@ -64,7 +67,7 @@
 
   <!-- Printer Cartridge-->
   <form action='printer_cartridge.php' method='post'>
-    <table>
+    <table class="table table-condensed center">
       <tr>
         <th colspan="2" align="center">Printer Cartridge</th>
       </tr>
@@ -92,7 +95,7 @@
 
   <!--Distilled Water-->
   <form action='distilled_water.php' method='post'>
-    <table>
+    <table class="table table-condensed center">
       <tr>
         <th colspan="2" align="center">Distilled Water</th>
       </tr>
@@ -109,7 +112,7 @@
 
   <!--Teflon-->
   <form action="teflon.php" method="post">
-    <table>
+    <table class="table table-condensed center">
       <tr>
         <th colspan="2" align="center">Teflon</th>
       </tr>
@@ -126,7 +129,7 @@
 
   <!--Pre-Treatment-->
   <form action='pre_treatment.php' method='post'>
-    <table>
+    <table class="table table-condensed center">
       <tr>
         <th colspan="2" align="center">Pre-Treatment</th>
       </tr>
