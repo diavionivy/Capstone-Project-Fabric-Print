@@ -21,8 +21,7 @@ if(!$conn)
 </head>
 <header>
 <h1>
-  <img src="images/MB_Horz_3Clr_whiteLtrs.png" class="imageHeader" alt="KSU Header"/>
-</header>
+<a href = "index.html"><img src="images/MB_Horz_3Clr_whiteLtrs.png" class="imageHeader" alt="KSU Header"/></a>    Admin Homepage</h1></header>
 <body>
 
 <h1> Admin List </h1>

@@ -164,16 +164,25 @@ $black_pre_treat_xl_count=mysqli_num_rows($black_pre_treat_xl_result);
 ?>
 
 <html>
+	
 
 <head>
 	<meta charset="UTF-8">
 	<title>Customer Homepage</title>
 	<link href="css/Customer_Homepage.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </head>
+<style>
+	body{
+		background-color: tan;
+	}
+</style>
 <header>
 	<h1>
-		This is the Customer Homepage
+	<a href = "index.php"><img src="images/MB_Horz_3Clr_whiteLtrs.png" class="imageHeader" alt="KSU Header"/></a>		This is the Customer Homepage
 	</h1>
 </header>
 
@@ -263,6 +272,13 @@ $black_pre_treat_xl_count=mysqli_num_rows($black_pre_treat_xl_result);
 		  To Admin Index
 		</button>
 	  </div>
+
+	  <div class="container">                 
+  <ul class="pager">
+    <li class="previous"><a href="Customer_Info.html">To Customer Info Page</a></li>
+    <li class="next"><a href="../Admin">To Admin Index</a></li>
+  </ul>
+</div>
 </body>
 
 </html>

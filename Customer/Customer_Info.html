@@ -5,13 +5,21 @@
 	<meta charset="UTF-8">
 	<title>Customer Info Entry</title>
 	<link href="css/Customer_Homepage.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
+
+<style>
+	body{
+		background-color:tan;
+	}
+	
+</style>
 <header>
 
-
 	<h1 id="headerText">
-		<img src="images/MB_Horz_3Clr_whiteLtrs.png" class="imageHeader" alt="KSU Header"/>
-		This is the Customer Info Entry Page
+		<a href = "index.php"><img src="images/MB_Horz_3Clr_whiteLtrs.png" class="imageHeader" alt="KSU Header"/></a>		This is the Customer Info Entry Page
 	</h1>
 </header>
 
@@ -60,8 +68,13 @@
 
 	<!-- Button to go to the Customer_Design Page-->
 	<button class="button" onClick="location.href='Customer_Design.php'">
-		To Design
+	To Desgin
 	</button>
+	<div class="container">             
+		<ul class="pager">
+		  <li><a href="Customer_Design.php" style="color: black;">To Desgin</a></li>
+		</ul>
+	  </div>
 
 </body>
 

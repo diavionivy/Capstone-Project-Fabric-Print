@@ -2,7 +2,7 @@
 /* CSS Document 
 Customer_Homepage.css*/
 header{
-	background-color: aliceblue;
+	background-color: grey;
 }
 body {
 	background-color: tan;
@@ -43,6 +43,33 @@ font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",
 #center {
 	margin: 0 auto;
 }
+.imageHeader{
+  width: 12em;
+}
+
+.slider-img-size{
+  height: auto;
+  width: auto;
+}
+
+.headerColor{
+  background-color: green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

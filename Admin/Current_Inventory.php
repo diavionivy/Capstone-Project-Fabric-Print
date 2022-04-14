@@ -211,8 +211,7 @@ $black_pre_treat_xl_count=mysqli_num_rows($black_pre_treat_xl_result);
 </head>
 <header>
   <h1>
-  <img src="images/MB_Horz_3Clr_whiteLtrs.png" class="imageHeader" alt="KSU Header"/>
-  This is the Current Inventory</h1>
+  <a href = "index.html"><img src="images/MB_Horz_3Clr_whiteLtrs.png" class="imageHeader" alt="KSU Header"/></a>    Admin Homepage</h1>  This is the Current Inventory</h1>
 </header>
 
 <!-- TODO: Make this page display current inventory levels-->
