@@ -38,8 +38,8 @@ font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",
 .MarginImageSweatShirt{
 	margin-left: 6em;
 }
-#center {
-	margin: 0 auto;
+.center {
+	text-align: center;
 }
 .imageHeader{
   width: 12em;
@@ -53,19 +53,6 @@ font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",
 .headerColor{
   background-color: green;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
